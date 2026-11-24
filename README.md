@@ -1,3 +1,25 @@
+# Splash Notes:
+
+This demo is adapted from a project started by previous club members.
+
+### Requirements:
+- Unity **2022.3 LTS** or later (this branch is on 2022.3.55f1)
+- Glove controler
+- Optional: Android build package if you want to build to a headset
+
+### How to use with controler:
+- Plug in controler ESP32, make sure red light turns on.
+- Connect your computer to the ESP32's wifi
+    - Name: Glove_#
+    - Password: 12345678
+- Run game
+
+### Nerd stuff:
+All the code relevant to the glove controller input is in:
+- Assets/Singularity/Singularitymanager.cs: handles Wi-Fi connection to the ESP32
+- Assets/Project/Asteroid Belt/Scripts/input_manager.cs: The **esp_message_received** function receives message from SingularityManager and extracts input information.
+- Assets/Project/Asteroid Belt/Scripts/player_movement.cs: Takes input information from input_manager and moves the spaceship with it.
+
 # 🌌 Beltfall: Tau Ceti
 
 **A gritty multiplayer sci-fi shooter set in the asteroid belts of Tau Ceti.**  
